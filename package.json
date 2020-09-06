@@ -6,7 +6,7 @@
     "dev": "nodemon ./app.js",
     "lint": "eslint .",
     "audit": "npm audit --audit-level=moderate",
-    "start": "node ./app.js",
+    "start": "node ./bin/www",
     "test": "nyc ava -v",
     "codecov": "codecov -f coverage/coverage-final.json"
   },
