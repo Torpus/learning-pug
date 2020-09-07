@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon ./app.js",
+    "dev": "nodemon ./bin/www",
     "lint": "eslint .",
     "audit": "npm audit --audit-level=moderate",
-    "start": "node ./app.js",
+    "start": "node ./bin/www",
     "test": "nyc ava -v",
     "codecov": "codecov -f coverage/coverage-final.json"
   },
@@ -24,7 +24,8 @@
     "husky": "^4.2.5",
     "nodemon": "^2.0.4",
     "nyc": "^15.1.0",
-    "semantic-release": "^17.1.1"
+    "semantic-release": "^17.1.1",
+    "semantic-release-docker": "^2.2.0"
   },
   "config": {
     "commitizen": {
@@ -34,6 +35,16 @@
   "husky": {
     "hooks": {
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "release": {
+    "verifyConditions": {
+      "path": "semantic-release-docker",
+      "registryUrl": "docker.io"
+    },
+    "publish": {
+      "path": "semantic-release-docker",
+      "name": "torpus/learning-pug"
     }
   }
 }

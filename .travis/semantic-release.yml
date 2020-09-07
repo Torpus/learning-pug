@@ -10,4 +10,5 @@ branches:
           provider: script
           skip_cleanup: true
           script:
+            - docker build -t torpus/learning-pug .
             - npx semantic-release
