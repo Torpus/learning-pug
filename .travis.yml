@@ -7,4 +7,5 @@ import:
   - .travis/node.yml
   - .travis/node-versions.yml
   - .travis/semantic-release.yml
+  - .travis/greenkeeper.yml
   - .travis/codecov.yml
