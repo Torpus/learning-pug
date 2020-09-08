@@ -48,5 +48,18 @@
       "path": "semantic-release-docker",
       "name": "torpus/learning-pug"
     }
+  },
+  "nyc": {
+    "include": [
+      "lib/**/*.js",
+      "index.js",
+      "cli.js"
+    ],
+    "reporter": [
+      "json",
+      "text",
+      "html"
+    ],
+    "all": true
   }
 }
