@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "ava": "^3.12.1",
+    "codecov": "^3.7.2",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^4.2.5",
     "nodemon": "^2.0.4",
