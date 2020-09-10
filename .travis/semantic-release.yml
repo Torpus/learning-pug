@@ -9,4 +9,5 @@ jobs:
       install:
         - travis_retry npm install
       script:
+        - docker build -t torpus/learning-pug .
         - npx semantic-release
